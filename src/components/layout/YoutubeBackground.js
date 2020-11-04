@@ -69,8 +69,6 @@ const YoutubeBackground = (props) => {
     <div>
       {/* <div className="videoContainer"> */}
       <div style={isMobile.matches ? divStyleMobile : divStyleDesktop}>
-        {console.log(youStyle169max)}
-
         <YouTube
           id="ubid"
           style={below169.matches ? youStyle169min : youStyle169max}

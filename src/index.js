@@ -8,7 +8,7 @@ import App from "./App";
 
 ReactDOM.render(
   <React.StrictMode>
-    <div id="noOverflow">
+    <div>
       <App />
     </div>
   </React.StrictMode>,
