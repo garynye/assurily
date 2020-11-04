@@ -1,5 +1,5 @@
 // import logo from './logo.svg';
-import "./App.css";
+// import "./App.css";
 import Home from "./components/pages/Home";
 import Signup from "./components/pages/Signup";
 import Purpose from "./components/pages/Purpose";

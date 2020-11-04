@@ -8,6 +8,7 @@
   background-color: #eee;
   color: white;
   transition: all 0.7s ease-in;
+  z-index: 1;
 }
 
 .scrolled {
@@ -43,7 +44,7 @@
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 
   text-decoration: none;
-  font-size: 14px;
+  font-size: 16px;
   padding: 0px 15px;
 
   text-align: right;
