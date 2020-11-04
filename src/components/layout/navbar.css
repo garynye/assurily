@@ -1,0 +1,55 @@
+.navbar {
+  width: 100%;
+  height: 74px;
+  box-sizing: border-box;
+
+  justify-content: space-between;
+  align-items: center;
+  background-color: #eee;
+  color: white;
+  transition: all 0.7s ease-in;
+}
+
+.scrolled {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0, 0.6);
+}
+
+.navbar img {
+
+  position: fixed;
+  left: 15px;
+  top: 15px;
+
+
+  width: 40px;
+  height: 40px;
+
+}
+.navbar img:hover {
+  opacity: 0.5;
+  transition: opacity 0.25s ease-in-out;
+}
+.navbar #linklist {
+  float: right;
+  padding-top: 30px;
+}
+
+.navbar a {
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+  text-decoration: none;
+  font-size: 14px;
+  padding: 0px 15px;
+
+  text-align: right;
+  transition: all 0.25s ease-in-out;
+}
+.navbar a:hover {
+  color: tomato;
+  transition: all 0.25s ease-in-out;
+}

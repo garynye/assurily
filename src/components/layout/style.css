@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css?family=Muli");
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700");
+
+* {
+  margin: 0;
+  overflow-x: hidden;
+  /* position: relative;  */
+
+  padding: 0;
+  /* max-width: 100%; */
+  box-sizing: border-box;
+  font-family: Roboto;
+}
+
+a {
+  text-decoration: none;
+}
+.largepad {
+  padding-bottom: 5000px;
+}
+
+#magicmoment {
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  padding-top: 30vh;
+  margin-bottom: 50px;
+}
+#magicmoment2 {
+  text-align: center;
+  color: white;
+  font-size: 40px;
+  line-height: 1.5;
+  font-weight: 300;
+  letter-spacing: 0.15rem;
+  text-align: center;
+  /* margin:auto; */
+  margin-bottom: 80px;
+}
+
+#magicbutton {
+  border-radius: 3px;
+  border: none;
+  display: block;
+  position: relative;
+  background-color: #ff3347a6;
+  color: white;
+  font-weight: 400;
+  font-size: 20px;
+  align-content: center;
+  margin: 0 auto;
+  padding: 15px 100px;
+  text-decoration: none;
+  transition: all 0.25s ease-in-out;
+}
+#magicbutton:hover {
+  background-color: #ed0000;
+  transition: all 0.25s ease-in-out;
+}
+
+.video-wrapper {
+    overflow-x: hidden;
+  /* overflow: hidden;
+  height: 100%;
+  margin: 0 auto; */
+  /* max-width: 100%; */
+  /* position:fixed; */
+  /* position: absolute; */
+  /* position: relative; */
+
+  /* margin:0;
+  padding:0;  */
+}
+
+#noOverflow {
+  overflow-x: hidden;
+  /* height: 100%;
+  margin: 0 auto; */
+  /* max-width: 100%; */
+  /* position:fixed; */
+  /* position: absolute; */
+  /* position: relative; */
+
+  /* margin:0;
+  padding:0;  */
+}
+.video-container {
+    overflow-x: hidden;
+  /* overflow: hidden; */
+  /* position: relative; */
+  /* max-width: 100%; */
+  /* position:fixed; */
+  /* position: absolute; */
+  /* position: relative; */
+  /* background-size:cover;
+    max-width: 100%; */
+
+  /* margin:0;
+  padding:0;  */
+}
+#YouTubeid {
+  /* height: 100%; */
+  /* margin:0; */
+  /* padding:0; */
+  /* position: fixed; */
+  width: 177.77777778vh;
+  min-width: 100%;
+overflow-x: hidden;
+  /* min-height: 56.25vw;  */
+  /* min-height: 56.25%;  */
+  /* min-height: calc(56.25*(-webkit-fill-available)); */
+  position: absolute;
+  pointer-events: none;
+  left: 50%;
+  top: 50%;
+  /* % of surrounding element */
+  /* top: -webkit-fill-available; */
+  transform: translate(-50%, -50%);
+  /* % of current element */
+  z-index: -99;
+  -webkit-filter: brightness(37%);
+  filter: brightness(37%);
+}
+
+@media screen and (max-width: 600px) {
+  #magicmoment {
+    font-size: 16px;
+  }
+  #magicmoment2 {
+    font-size: 25px;
+    font-weight: 100;
+    padding: 0 2%;
+    letter-spacing: 0.12rem;
+  }
+  #magicbutton {
+    padding: 8px 60px;
+  }
+}
