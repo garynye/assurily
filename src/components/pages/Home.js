@@ -18,18 +18,18 @@ const Home = () => {
       <NavbarCustom />
 
       {/* <YoutubeBackground videoID="9VFBRIhyG_M" /> */}
-
-      <Video
-        loop={true}
-        autoPlay={true}
-        cloudName="assurily"
-        publicId="assurily/videos/desertdrive"
-      >
-        <Transformation
-          crop="fit"
-          quality="auto:low"
-        />
-      </Video>
+      <div style={isMobile.matches ? divStyleMobile : divStyleDesktop}>
+        <Video
+          
+          style={below169.matches ? youStyle169min : youStyle169max}
+          loop={true}
+          autoPlay={true}
+          cloudName="assurily"
+          publicId="assurily/videos/desertdrive"
+        >
+          <Transformation crop="fit" quality="auto:low" />
+        </Video>
+      </div>
 
       <MagicContainer>
         <MagicTitle>TAKE BACK WHAT IS YOURS </MagicTitle>
@@ -103,4 +103,43 @@ const MagicButton = styled.a`
   }
 `;
 
+//video css details
+const below169 = window.matchMedia("(min-aspect-ratio: 16/9)");
+const isMobile = window.matchMedia("(max-width: 600px)");
+const divStyleMobile = {
+  position: "relative",
+  overflow: "hidden",
+  width: "100",
+  height: window.innerHeight,
+};
+const divStyleDesktop = {
+  position: "relative",
+  overflow: "hidden",
+  width: "100vw",
+  height: "100vh",
+};
+
+const youStyle169min = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  width: "100vw",
+  pointerEvents: "none",
+  transform: "translate(-50%, -50%)",
+  webkitFilter: "brightness(37%)",
+  filter: "brightness(37%)",
+  height: "56.25vw",
+};
+const widthcss = 1.7778 * window.innerHeight;
+const youStyle169max = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  height: window.innerHeight,
+  pointerEvents: "none",
+  transform: "translate(-50%, -50%)",
+  webkitFilter: "brightness(37%)",
+  filter: "brightness(37%)",
+  width: widthcss,
+};
 export default Home;
