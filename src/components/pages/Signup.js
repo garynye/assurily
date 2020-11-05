@@ -1,10 +1,10 @@
 import React from "react";
-import Navbar from "../layout/NavbarAss";
+// import Navbar from "../layout/NavbarAss";
 
 const Signup = () => {
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       Signup page
     </div>
   );

@@ -4,23 +4,34 @@ import NavbarCustom from "../layout/NavbarCustom";
 import YoutubeBackground from "../layout/YoutubeBackground";
 import styled from "styled-components";
 import "../layout/style.css";
+import {
+  Image,
+  Video,
+  Transformation,
+  CloudinaryContext,
+} from "cloudinary-react";
 
 const Home = () => {
   return (
     <div>
       <NavbarCustom />
 
-      <YoutubeBackground videoID="9VFBRIhyG_M" />
+      {/* <YoutubeBackground videoID="9VFBRIhyG_M" /> */}
 
-        <MagicContainer>
-          <MagicTitle>TAKE BACK WHAT IS YOURS </MagicTitle>
-          <MagicStatement>
-            Your home & auto insurance shopper that saves you time and money.
-          </MagicStatement>
-          <MagicButton href="./Signup">Sign Up for Free</MagicButton>
-          <div className="largepad"></div>
-        </MagicContainer>
+      <Video
+        cloudName="assurily"
+        publicId="assurily/videos/desertdrive_mdznwo"
+      >
+      </Video>
 
+      <MagicContainer>
+        <MagicTitle>TAKE BACK WHAT IS YOURS </MagicTitle>
+        <MagicStatement>
+          Your home & auto insurance shopper that saves you time and money.
+        </MagicStatement>
+        <MagicButton href="./Signup">Sign Up for Free</MagicButton>
+        <div className="largepad"></div>
+      </MagicContainer>
     </div>
   );
 };

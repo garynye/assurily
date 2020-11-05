@@ -1,7 +1,7 @@
 import React from "react";
 import "./navbar.css";
-import { NavBar, Icon } from "antd-mobile";
-import "antd-mobile/dist/antd-mobile.css";
+// import { NavBar, Icon } from "antd-mobile";
+// import "antd-mobile/dist/antd-mobile.css";
 // import aLogo from "../media/a-450-450WHITE.png";
 // import { Link } from "react-router-dom";
 
@@ -9,7 +9,7 @@ const NavbarAss = () => {
   return (
 
     <div>
-      <NavBar
+      {/* <NavBar
         mode="light"
         icon={<Icon type="left" />}
         onLeftClick={() => console.log("onLeftClick")}
@@ -30,7 +30,7 @@ const NavbarAss = () => {
         ]}
       >
         NavBar second bar
-      </NavBar>
+      </NavBar> */}
     </div>
   );
 };
