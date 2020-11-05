@@ -20,12 +20,13 @@ const Home = () => {
       {/* <YoutubeBackground videoID="9VFBRIhyG_M" /> */}
       <div style={isMobile.matches ? divStyleMobile : divStyleDesktop}>
         <Video
-          
           style={below169.matches ? youStyle169min : youStyle169max}
           loop={true}
           autoPlay={true}
           cloudName="assurily"
+          muted="muted"
           publicId="assurily/videos/desertdrive"
+          playsinline="playsinline"
         >
           <Transformation crop="fit" quality="auto:low" />
         </Video>
