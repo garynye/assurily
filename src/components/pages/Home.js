@@ -1,15 +1,16 @@
 import React from "react";
 // import NavbarAss from "../layout/NavbarAss";
 import NavbarCustom from "../layout/NavbarCustom";
-import YoutubeBackground from "../layout/YoutubeBackground";
+// import YoutubeBackground from "../layout/YoutubeBackground";
 import styled from "styled-components";
 import "../layout/style.css";
-import {
-  Image,
-  Video,
-  Transformation,
-  CloudinaryContext,
-} from "cloudinary-react";
+// import {
+//   Image,
+//   Video,
+//   Transformation,
+//   CloudinaryContext,
+// } from "cloudinary-react";
+import { Video, Transformation } from "cloudinary-react";
 
 const Home = () => {
   return (
@@ -19,9 +20,15 @@ const Home = () => {
       {/* <YoutubeBackground videoID="9VFBRIhyG_M" /> */}
 
       <Video
+        loop={true}
+        autoPlay={true}
         cloudName="assurily"
-        publicId="assurily/videos/desertdrive_mdznwo"
+        publicId="assurily/videos/desertdrive"
       >
+        <Transformation
+          crop="fit"
+          quality="auto:low"
+        />
       </Video>
 
       <MagicContainer>
