@@ -1,6 +1,7 @@
-import "./style.css";
+import "./youtube.css";
 import React, { useState } from "react";
 import YouTube from "react-youtube";
+// import "../nesting.css";
 
 // https://stackoverflow.com/questions/46635316/youtube-embedded-video-auto-loop-without-refresh-screen
 
@@ -29,10 +30,8 @@ const YoutubeBackground = (props) => {
     }
   };
 
+  //used to have width and height before playervars and after opts height 100%, width "100%"
   const opts = {
-    height: "100%",
-    width: "100%",
-
     playerVars: {
       // https://developers.google.com/youtube/player_parameters
       controls: 0,
@@ -51,20 +50,77 @@ const YoutubeBackground = (props) => {
   };
 
   //https://github.com/tjallingt/react-youtube
+
+  // passing the sytle in above.  check nesting.css to see which media should happen
+  // need to find out if you can pass sytle in the youtube.  may not be able to
+  // the goal is to figure out how to
+
+  // try classname?
+  // <YouTube
+  //   id="ubid"
+  //   style={below169.matches ? youStyle169min : youStyle169max}
+  //   videoId={videoId}
+  //   onReady={onReady}
+  //   opts={opts}
+  //   onStateChange={rewind}
+  // />;
+
   return (
-    <div className="video-wrapper">
-      <div className="video-container">
+    <div>
+      {/* <div className="videoContainer"> */}
+      <div style={isMobile.matches ? divStyleMobile : divStyleDesktop}>
         <YouTube
-          id="YouTubeid"
+          id="ubid"
+          style={below169.matches ? youStyle169min : youStyle169max}
           videoId={videoId}
           onReady={onReady}
           opts={opts}
           onStateChange={rewind}
-          
         />
       </div>
     </div>
   );
+};
+
+//CSS details
+
+const below169 = window.matchMedia("(min-aspect-ratio: 16/9)");
+const isMobile = window.matchMedia("(max-width: 600px)");
+const divStyleMobile = {
+  position: "relative",
+  overflow: "hidden",
+  width: "100",
+  height: window.innerHeight,
+};
+const divStyleDesktop = {
+  position: "relative",
+  overflow: "hidden",
+  width: "100",
+  height: "100vh",
+};
+
+const youStyle169min = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  width: "100vw",
+  pointerEvents: "none",
+  transform: "translate(-50%, -50%)",
+  webkitFilter: "brightness(37%)",
+  filter: "brightness(37%)",
+  height: "56.25vw",
+};
+const widthcss = 1.7778 * window.innerHeight;
+const youStyle169max = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  height: window.innerHeight,
+  pointerEvents: "none",
+  transform: "translate(-50%, -50%)",
+  webkitFilter: "brightness(37%)",
+  filter: "brightness(37%)",
+  width: widthcss,
 };
 
 export default YoutubeBackground;
