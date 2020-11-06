@@ -3,6 +3,8 @@ import "./carousel.css";
 import { Carousel } from "react-responsive-carousel";
 import styled from "styled-components";
 
+//https://dev.to/aryaziai/modern-testimonials-in-react-tutorial-cn1
+
 export default class Testimonials extends Component {
   render() {
     return (
@@ -120,8 +122,8 @@ const MyCarousel = styled.div`
   padding-left: 5%;
   padding-right: 5%;
   border: 1px solid #ddd;
-  height: 286px;
-  @media (max-width: 600px) {
+  height: 300px;
+  @media (max-width: 1400px) {
     background: #fafafa;
     margin-top: -9%;
     width: 88%;

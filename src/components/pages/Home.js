@@ -1,10 +1,11 @@
 import React from "react";
-// import NavbarAss from "../layout/NavbarAss";
-import NavbarCustom from "../layout/NavbarCustom";
-// import YoutubeBackground from "../layout/YoutubeBackground";
+
+import BSNavBar from "../layout/BSNavBar";
+
 import styled from "styled-components";
 import "../layout/style.css";
 import Testimonials from "../layout/Testimonials.js";
+
 // import {
 //   Image,
 //   Video,
@@ -16,9 +17,8 @@ import { Video, Transformation } from "cloudinary-react";
 const Home = () => {
   return (
     <div>
-      <NavbarCustom />
+      <BSNavBar />
 
-      {/* <YoutubeBackground videoID="9VFBRIhyG_M" /> */}
       <div style={isMobile.matches ? divStyleMobile : divStyleDesktop}>
         <Video
           style={below169.matches ? youStyle169min : youStyle169max}
@@ -61,7 +61,7 @@ const MagicTitle = styled.p`
   font-weight: 500;
   letter-spacing: 0.1em;
   padding-bottom: 50px;
-  width: 100vw;
+  width: 100%;
   @media (max-width: 600px) {
     font-size: 16px;
   }

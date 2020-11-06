@@ -1,10 +1,10 @@
 import React from "react";
-import Navbar from "../layout/NavbarAss";
+import BSNavBar from "../layout/BSNavBar";
 
 const Purpose = () => {
   return (
     <div>
-      <Navbar />
+      <BSNavBar />
       purpose page
     </div>
   );
