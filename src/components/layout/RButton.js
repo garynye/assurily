@@ -19,7 +19,7 @@ const MagicButton = styled.a`
   font-weight: 400;
   font-size: 20px;
   text-align: center;
-  padding: 15px 100px;
+  padding: 8px 60px;
   text-decoration: none;
   transition: all 0.25s ease-in-out;
   &:hover {
@@ -30,7 +30,7 @@ const MagicButton = styled.a`
   }
   @media (max-width: 600px) {
     padding: 8px 60px;
-    padding: 15px 70px;
+ 
   }
 `;
 
