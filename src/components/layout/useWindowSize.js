@@ -1,4 +1,4 @@
-"use strict";
+// "use strict";
 let { useState, useEffect } = require("react");
 
 function getSize() {
@@ -27,4 +27,5 @@ function useWindowSize() {
   return windowSize;
 }
 
-module.exports = useWindowSize;
+// module.exports = useWindowSize;
+export default useWindowSize;
