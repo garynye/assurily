@@ -1,6 +1,7 @@
 import React from "react";
 
 import BSNavBar from "../layout/BSNavBar";
+import Howitworks from "../layout/Howitworks";
 
 import styled from "styled-components";
 import "../layout/style.css";
@@ -42,6 +43,7 @@ const Home = () => {
         <div className="largepad"></div>
       </MagicContainer>
       <Testimonials />
+      <Howitworks />
     </div>
   );
 };
@@ -100,6 +102,8 @@ const MagicButton = styled.a`
   &:hover {
     background-color: #ed0000;
     transition: all 0.25s ease-in-out;
+    text-decoration: none;
+    color: white;
   }
   @media (max-width: 600px) {
     padding: 8px 60px;
@@ -109,6 +113,8 @@ const MagicButton = styled.a`
 //video css details
 const below169 = window.matchMedia("(min-aspect-ratio: 16/9)");
 const isMobile = window.matchMedia("(max-width: 600px)");
+const widthcssmobile = 1.7778 * window.innerHeight;
+const widthcssdesktop = "177.778vh";
 const divStyleMobile = {
   position: "relative",
   overflow: "hidden",
@@ -132,7 +138,7 @@ const youStyle169min = {
   filter: "brightness(37%)",
   height: "56.25vw",
 };
-const widthcss = 1.7778 * window.innerHeight;
+
 const youStyle169max = {
   position: "absolute",
   top: "50%",
@@ -142,6 +148,6 @@ const youStyle169max = {
   transform: "translate(-50%, -50%)",
   webkitFilter: "brightness(37%)",
   filter: "brightness(37%)",
-  width: widthcss,
+  width: isMobile.matches ? widthcssmobile : widthcssdesktop,
 };
 export default Home;

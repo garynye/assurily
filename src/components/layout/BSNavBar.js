@@ -3,15 +3,19 @@ import Navbar from "react-bootstrap/Navbar";
 import aLogo from "../media/a-450-450WHITE.png";
 // import NavDropdown from "react-bootstrap/NavDropdown";
 import Nav from "react-bootstrap/Nav";
-import "./navbar.css";
+// import "./navbar.css";
 import useWindowScrollPosition from "@rehooks/window-scroll-position";
+import useWindowWidth from "./useWindowSize";
 
 function BSNavBar() {
   const [change, setChange] = useState(false);
+  const [cwidth, setCWidth] = useState(false);
   const changePosition = 300;
+  const changeWidth = 991;
 
   let position = useWindowScrollPosition();
   // position == { x: 0, y: 0 }
+  let windowsize = useWindowWidth();
 
   if (position.y > changePosition && !change) {
     setChange(true);
@@ -19,6 +23,15 @@ function BSNavBar() {
 
   if (position.y <= changePosition && change) {
     setChange(false);
+  }
+
+  if (windowsize.innerWidth < changeWidth && !cwidth) {
+    console.log("here");
+    setCWidth(true);
+  }
+
+  if (windowsize.innerWidth >= changeWidth && cwidth) {
+    setCWidth(false);
   }
 
   let style = {
@@ -34,16 +47,19 @@ function BSNavBar() {
   };
 
   let burgerStyle = {
-    backgroundColor: "rgb(0,0,0, .8)",
+    backgroundColor: cwidth ? "rgb(0,0,0,0.8)" : "transparent",
     marginTop: "-74px",
     marginRight: "-20px",
     marginLeft: "-20px",
     paddingTop: "94px",
     borderTop: "solid",
     textAlign: "right",
+    width: "100%",
     paddingRight: "20px",
+
     zIndex: "-1",
   };
+
   return (
     <>
       <Navbar
@@ -63,8 +79,12 @@ function BSNavBar() {
           />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav" style={burgerStyle}>
-          <Nav className="mr-auto"></Nav>
+
+        <Navbar.Collapse
+          id="responsive-navbar-nav"
+          className="justify-content-end"
+          style={burgerStyle}
+        >
           <Nav>
             <Nav.Link href="./Services">Our Services</Nav.Link>
             <Nav.Link href="./Purpose">Our Purpose</Nav.Link>
