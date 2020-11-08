@@ -16,14 +16,16 @@ import Testimonials from "../layout/Testimonials.js";
 import { Video, Transformation } from "cloudinary-react";
 
 const Home = () => {
+  //here we have to set an ultrawidescreen var so that way we can manage if the screen goes wider than 16/9.  we have to setstate as this varaible will need to move from true to false and rerender if the person resizes their window.
   var [isUltraWideScreen, setIsUltraWideScreen] = React.useState(
     window.matchMedia("(min-aspect-ratio: 16/9)").matches
   );
   var aspectRatio = window.matchMedia("(min-aspect-ratio: 16/9)");
 
+  //adding event listener to the match media state, and then call the function
   aspectRatio.addEventListener("change", changeLayout);
-  // aspectRatio.add
 
+//each time the window resizes, we check to see if the aspect ratio changes, and if so, we switch the the widescreen boolean, which then applies the video css styles.
   function changeLayout() {
     if (aspectRatio.matches) {
       setIsUltraWideScreen(true);
