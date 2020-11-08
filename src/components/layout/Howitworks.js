@@ -3,59 +3,99 @@ import RButton from "../layout/RButton";
 import styled from "styled-components";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import Container from "react-bootstrap/Container";
+import Fade from "react-bootstrap/Fade";
+
 
 const Howitworks = () => {
   return (
     <div>
-      <Row>
-        <Col style={noOverflow} md={7}>
-          <Image
-            className="img-fluid w-100"
-            src="https://res.cloudinary.com/assurily/image/upload/v1604687931/assurily/howitworks/watchsmall.jpg"
-            alt=""
-          ></Image>
-        </Col>
-        <Col style={noOverflow} md={5}>
-          <Textdiv className="h-100">
-            <h1>Your personal shopper</h1>
-            <p>
-              We are your expert insurance shopper. Our technology continuously
-              monitors & compares quotes to find you the same or better coverage
-              at a lower price. We handle all the dirty work with switching so
-              you don’t have to.
-            </p>
-            <RButton />
-            <h2>(one time, forever)</h2>
-          </Textdiv>
-        </Col>
-      </Row>
+      <Fade appear={true}>
+        <Div992>
+          <Row style={noOverflow}  className="align-items-center">
+            <Col style={noOverflow} lg={7}>
+              <Image
+                className="img-fluid w-100"
+                src="https://res.cloudinary.com/assurily/image/upload/v1604687931/assurily/howitworks/watchsmall.jpg"
+                alt=""
+              ></Image>
+            </Col>
+            <Col lg={5}>
+              <Textdiv>
+                <Title>Your personal shopper</Title>
+                <Paragraph>
+                  We are your expert insurance shopper. Our technology
+                  continuously monitors & compares quotes to find you the same
+                  or better coverage at a lower price. We handle all the dirty
+                  work with switching so you don’t have to.
+                </Paragraph>
+                <RButton />
+                <Thought>(one time, forever)</Thought>
+              </Textdiv>
+            </Col>
+          </Row>
+        </Div992>
+      </Fade>
     </div>
   );
 };
 
+const Div992 = styled.div`
+  margin: 0px;
+    @media (max-width: 992px) {
+    margin-top: 20px
+    margin-left: 20px
+    margin-right: 20px
+  }
+  `;
+
 const noOverflow = {
   overflow: "hidden",
-    margin:"0",
-  padding:"0",
-}
+  backgroundColor: "rgb(34, 37, 41)",
+  margin: "0",
+  padding: "0",
+};
+
+const Title = styled.h1`
+  font-size: 25px;
+  text-align: left;
+  font-weight: 400;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  letter-spacing: 0.12rem;
+`;
+
+const Paragraph = styled.p`
+  font-size: 15px;
+  text-align: left;
+  font-weight: 300;
+  line-height: 1.5rem;
+  padding-bottom: 20px;
+  letter-spacing: 0.04rem;
+`;
+
+const Thought = styled.h6`
+  font-size: 13px;
+  text-align: left;
+  font-weight: 300;
+  padding-top: 40px;
+  font-style: italic;
+  padding-bottom: 20px;
+  text-align: center;
+  letter-spacing: 0.08rem;
+`;
 
 const Textdiv = styled.div`
-  background-color: rgb(49, 49, 50);
   text-align: center;
+  width: 80%;
   color: white;
+  margin: 0 auto;
 `;
 
 const Image = styled.img`
-  width: 67%;
-
-  
   &:hover {
-    transform: scale(1.3);
-    transition: all 0.5s ease-in-out;
-  }
-  @media (max-width: 600px) {
-    width: 24%;
+    transform: scale(1.1);
+    opacity: 0.7;
+    transition: all 1s ease-in-out;
   }
 `;
 export default Howitworks;
