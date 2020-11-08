@@ -56,9 +56,11 @@ function BSNavBar() {
     textAlign: "right",
     width: "100%",
     paddingRight: "20px",
-
+    // transition: "all 1s ease-in-out",
     zIndex: "-1",
   };
+
+
 
   return (
     <>
@@ -78,6 +80,7 @@ function BSNavBar() {
             alt="Assurily logo"
           />
         </Navbar.Brand>
+
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
 
         <Navbar.Collapse

@@ -4,7 +4,7 @@ import styled from "styled-components";
 const RButton = () => {
     return (
       
-        <MagicButton href="./Signup">Sign Up for Free</MagicButton>
+        <MagicButton href="./Signup">Sign Up Now</MagicButton>
       
     );
 }
@@ -19,7 +19,7 @@ const MagicButton = styled.a`
   font-weight: 400;
   font-size: 20px;
   text-align: center;
-  padding: 8px 60px;
+  padding: 10px 100px;
   text-decoration: none;
   transition: all 0.25s ease-in-out;
   &:hover {
@@ -28,7 +28,7 @@ const MagicButton = styled.a`
     text-decoration: none;
     color: white;
   }
-  @media (max-width: 600px) {
+  @media (max-width: 1024px) {
     padding: 8px 60px;
  
   }
