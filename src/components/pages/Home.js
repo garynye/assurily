@@ -22,8 +22,8 @@ const Home = () => {
     window.matchMedia("(pointer:coarse)").matches;
   // const narrowWidthMobile = 1.7778 * window.innerHeight;
   const narrowWidthMobile = isPortrait
-    ? (1.7778 * window.innerHeight)
-    : (1.4286 * window.innerWidth);
+    ? 1.7778 * window.innerHeight
+    : 1.4286 * window.innerWidth;
   // const narrowHeightMobile = window.innerHeight;
   const narrowHeightMobile = isPortrait
     ? window.innerHeight
@@ -152,7 +152,11 @@ const Home = () => {
       <BSNavBar />
       <div style={isMobile ? divStyleMobile : divStyleDesktop}>
         <Video
-          style={isUltraWideScreen && !isMobile ? ultraWideScreenFormat : narrowScreenFormat}
+          style={
+            isUltraWideScreen && !isMobile
+              ? ultraWideScreenFormat
+              : narrowScreenFormat
+          }
           loop={true}
           autoPlay={true}
           cloudName="assurily"
