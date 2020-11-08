@@ -16,26 +16,13 @@ import Testimonials from "../layout/Testimonials.js";
 import { Video, Transformation } from "cloudinary-react";
 
 const Home = () => {
-  var [isUltraWideScreen, setIsUltraWideScreen] = React.useState(
-    window.matchMedia("(min-aspect-ratio: 16/9)").matches
-  );
-  var aspectRatio = window.matchMedia("(min-aspect-ratio: 16/9)");
-
-  aspectRatio.addEventListener("change", changeLayout);
-  // aspectRatio.add
-
-  function changeLayout() {
-    if (aspectRatio.matches) {
-      setIsUltraWideScreen(true);
-    } else setIsUltraWideScreen(false);
-  }
-
   return (
     <div>
       <BSNavBar />
-      <div style={isMobile ? divStyleMobile : divStyleDesktop}>
+
+      <div style={isMobile.matches ? divStyleMobile : divStyleDesktop}>
         <Video
-          style={isUltraWideScreen ? ultraWideScreenFormat : narrowScreenFormat}
+          style={below169.matches ? youStyle169min : youStyle169max}
           loop={true}
           autoPlay={true}
           cloudName="assurily"
@@ -124,15 +111,15 @@ const MagicButton = styled.a`
 `;
 
 //video css details
-// const below169 = window.matchMedia("(min-aspect-ratio: 16/9)");
-
-const isMobile =
-  window.matchMedia("(pointer:none}").matches ||
-  window.matchMedia("(pointer:coarse)").matches;
-const narrowWidthMobile = 1.7778 * window.innerHeight;
-const narrowHeightMobile = window.innerHeight;
-const narrowHeightDesktop = "100vh";
-const narrowWidthDesktop = "177.778vh";
+const below169 = window.matchMedia("(min-aspect-ratio: 16/9)");
+const isUltraWideScreen = window.matchMedia("(min-aspect-ratio: 16/9)");
+const isMobile = window.matchMedia("(max-width: 600px)");
+const isMobile2 =
+  window.matchMedia("pointer:none") || window.matchMedia("pointer:coarse");
+const widthcssmobile = 1.7778 * window.innerHeight;
+const heightcssmobile = window.innerHeight;
+const heightcssdesktop = "100vh";
+const widthcssdesktop = "177.778vh";
 
 const divStyleMobile = {
   position: "relative",
@@ -147,25 +134,47 @@ const divStyleDesktop = {
   height: "100vh",
 };
 
-const narrowScreenFormat = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  height: isMobile ? narrowHeightMobile : narrowHeightDesktop,
-  pointerEvents: "none",
-  transform: "translate(-50%, -50%)",
-  webkitFilter: "brightness(37%)",
-  filter: "brightness(37%)",
-  width: isMobile ? narrowWidthMobile : narrowWidthDesktop,
-};
-const ultraWideScreenFormat = {
+const youStyle169min = {
   position: "absolute",
   top: "50%",
   left: "50%",
   width: "100%",
   pointerEvents: "none",
   transform: "translate(-50%, -50%)",
+  filter: "brightness(37%)",
+  height: "56.25vw",
+};
+
+const youStyle169max = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  height: window.innerHeight,
+  pointerEvents: "none",
+  transform: "translate(-50%, -50%)",
   webkitFilter: "brightness(37%)",
+  filter: "brightness(37%)",
+  width: isMobile.matches ? widthcssmobile : widthcssdesktop,
+};
+
+const ultraWideScreenFormat = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  height: isMobile.matches ? heightcssmobile : heightcssdesktop,
+  pointerEvents: "none",
+  transform: "translate(-50%, -50%)",
+  webkitFilter: "brightness(37%)",
+  filter: "brightness(37%)",
+  width: isMobile.matches ? widthcssmobile : widthcssdesktop,
+};
+const narrowScreenFormat = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  width: "100%",
+  pointerEvents: "none",
+  transform: "translate(-50%, -50%)",
   filter: "brightness(37%)",
   height: "56.25vw",
 };

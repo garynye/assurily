@@ -26,7 +26,7 @@ function BSNavBar() {
   }
 
   if (windowsize.innerWidth < changeWidth && !cwidth) {
-    console.log("here");
+
     setCWidth(true);
   }
 
