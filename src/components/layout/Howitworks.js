@@ -5,6 +5,10 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 // import Fade from "react-bootstrap/Fade";
 // import { CSSTransition } from "react-transition-group";
+//uninstall this if not needed.
+
+
+//use intersection observer
 
 const Howitworks = () => {
   return (

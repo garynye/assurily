@@ -14,9 +14,6 @@ const Home = () => {
     window.matchMedia("(orientation: portrait)").matches
   );
 
-  //video css details
-  // const below169 = window.matchMedia("(min-aspect-ratio: 16/9)");
-
   const isMobile =
     window.matchMedia("(pointer:none}").matches ||
     window.matchMedia("(pointer:coarse)").matches;
@@ -35,7 +32,6 @@ const Home = () => {
     position: "relative",
     overflow: "hidden",
     width: "100%",
-    // height: window.innerHeight,
     height: isPortrait ? window.innerHeight : 0.7 * window.innerWidth,
   };
   const divStyleDesktop = {
@@ -52,7 +48,7 @@ const Home = () => {
     height: isMobile ? narrowHeightMobile : narrowHeightDesktop,
     pointerEvents: "none",
     transform: "translate(-50%, -50%)",
-    webkitFilter: "brightness(37%)",
+    WebkitFilter: "brightness(37%)",
     filter: "brightness(37%)",
     width: isMobile ? narrowWidthMobile : narrowWidthDesktop,
   };
@@ -63,7 +59,7 @@ const Home = () => {
     width: "100%",
     pointerEvents: "none",
     transform: "translate(-50%, -50%)",
-    webkitFilter: "brightness(37%)",
+    WebkitFilter: "brightness(37%)",
     filter: "brightness(37%)",
     height: "56.25vw",
   };
@@ -73,25 +69,46 @@ const Home = () => {
     window.matchMedia("(min-aspect-ratio: 16/9)").matches
   );
 
+  //adding event listener to the match media state, and then call the function.  using use state so it only adds one listener on load vs. each render adding new listeners.
+  //each time the window resizes, we check to see if the aspect ratio changes, and if so, we switch the the widescreen boolean, which then applies the video css styles.  movinging these in the use effect
   var aspectRatio = window.matchMedia("(min-aspect-ratio: 16/9)");
+  var orientationObject = window.matchMedia("(orientation: portrait)");
+  React.useEffect(() => {
+    aspectRatio.addEventListener("change", changeLayout);
+    orientationObject.addEventListener("change", changePortrait);
+    console.log("added listener for aspect ratio and portrait");
 
-  //adding event listener to the match media state, and then call the function
-  aspectRatio.addEventListener("change", changeLayout);
+    function changeLayout() {
+      console.log("changing layout");
+      if (aspectRatio.matches && !isMobile) {
+        setIsUltraWideScreen(true);
+      } else setIsUltraWideScreen(false);
+    }
 
-  //each time the window resizes, we check to see if the aspect ratio changes, and if so, we switch the the widescreen boolean, which then applies the video css styles.
-  function changeLayout() {
-    if (aspectRatio.matches && !isMobile) {
-      setIsUltraWideScreen(true);
-    } else setIsUltraWideScreen(false);
-  }
+    function changePortrait() {
+      console.log("changing portrait");
+      if (!isPortrait && isMobile) {
+        setIsPortrait(true);
+      } else setIsPortrait(false);
+    }
+    //cleanup function to remove listner on each call
+    return () => {
+      console.log("cleanup");
+      aspectRatio.removeEventListener("change", changeLayout);
+      orientationObject.removeEventListener("change", changePortrait);
+    };
+  }, [isMobile, aspectRatio, orientationObject, isPortrait]);
+  console.log("rerender");
 
   const MagicContainer = styled.div`
     position: absolute;
     width: 100%;
     color: white;
     text-align: center;
-    top: 0;
-    padding-top: ${0.3 * window.innerHeight}px;
+    // top: ${isMobile ? "0" : "30%"};
+    // padding-top: ${isMobile ? 0.3 * window.innerHeight : "0"};
+    top: ${isMobile ? 0.3 * window.innerHeight + "px" : "30%"};
+    padding-top: 0%;
   `;
 
   const MagicTitle = styled.p`
