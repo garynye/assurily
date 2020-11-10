@@ -10,9 +10,6 @@ const Companies = () => {
       <Carousel
         id="companies"
         controls={false}
-        infiniteLoop={true}
-        showThumbs={false}
-        showStatus={false}
         touch={false}
         autoPlay={true}
         interval={3000}

@@ -29,7 +29,7 @@ const Howitworks = () => {
                   or better coverage at a lower price. We handle all the dirty
                   work with switching so you don’t have to.
                 </Paragraph>
-                <RButton />
+                <RButton link="./Signup" text="Sign Up Now" />
                 <Thought>(one time, forever)</Thought>
               </Textdiv>
             </Col>
@@ -47,7 +47,7 @@ const Howitworks = () => {
                   no matter the insurance carrier you go with. We work with more
                   than 30 insurance carriers across the US.
                 </Paragraph>
-                <RButton />
+                <RButton link="./Signup" text="Sign Up Now" />
                 <Thought>(Make them pay for you)</Thought>
               </Textdiv>
             </Col>{" "}
@@ -84,7 +84,7 @@ const Howitworks = () => {
                   and when it happens. We won’t do anything without you
                   approving it.
                 </Paragraph>
-                <RButton />
+                <RButton link="./Signup" text="Sign Up Now" />
                 <Thought>(Turn the tables)</Thought>
               </Textdiv>
             </Col>

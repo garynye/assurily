@@ -1,11 +1,13 @@
 import React from 'react'
 import styled from "styled-components";
 
-const RButton = () => {
+const RButton = (props) => {
+  const { link, text } = props;
     return (
-      
-        <MagicButton href="./Signup">Sign Up Now</MagicButton>
-      
+      <>
+      {/* <MagicButton href="./Signup">Sign Up Now</MagicButton> */}
+        <MagicButton href={link}>{text}</MagicButton>
+      </>
     );
 }
 

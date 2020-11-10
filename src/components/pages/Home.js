@@ -7,10 +7,11 @@ import styled from "styled-components";
 import "../layout/style.css";
 import Testimonials from "../layout/Testimonials.js";
 import Companies from "../layout/Companies.js";
-import RButton from "../layout/RButton"
+import RButton from "../layout/RButton";
 import { Fade } from "react-awesome-reveal";
 import { Video, Transformation } from "cloudinary-react";
 import FourIcons from "../layout/FourIcons";
+import AssurilyResources from "../layout/AssurilyResources";
 
 const Home = () => {
   var [isPortrait, setIsPortrait] = React.useState(
@@ -108,97 +109,6 @@ const Home = () => {
     };
   }, [isMobile, aspectRatio, orientationObject, isPortrait]);
 
-  const MagicContainer = styled.div`
-    position: absolute;
-    width: 100%;
-    color: white;
-    text-align: center;
-    // top: ${isMobile ? "0" : "30%"};
-    // padding-top: ${isMobile ? 0.3 * window.innerHeight : "0"};
-    top: ${isMobile ? 0.3 * window.innerHeight + "px" : "30%"};
-    padding-top: 0%;
-  `;
-
-  const MagicTitle = styled.p`
-    text-align: center;
-    font-size: 20px;
-    font-weight: 500;
-    letter-spacing: 0.1em;
-    padding-bottom: 50px;
-    width: 100%;
-    @media (max-width: 600px) {
-      font-size: 16px;
-    }
-  `;
-
-  const MagicStatement = styled.p`
-    text-align: center;
-    position: relative;
-    font-size: 40px;
-    line-height: 1.5;
-    font-weight: 300;
-    letter-spacing: 0.15rem;
-    text-align: center;
-
-    margin-bottom: 80px;
-    @media (max-width: 600px) {
-      font-size: 25px;
-      font-weight: 100;
-      padding: 0 2%;
-      letter-spacing: 0.12rem;
-    }
-  `;
-
-  const MagicButton = styled.a`
-    border-radius: 3px;
-    border: none;
-    background-color: #ff3347a6;
-
-    color: white;
-    font-weight: 400;
-    font-size: 20px;
-    text-align: center;
-    padding: 15px 80px;
-    text-decoration: none;
-    transition: all 0.25s ease-in-out;
-    &:hover {
-      background-color: #ed0000;
-      transition: all 0.25s ease-in-out;
-      text-decoration: none;
-      color: white;
-    }
-    @media (max-width: 600px) {
-      padding: 8px 60px;
-    }
-  `;
-
-  const WhyAssurily = styled.h2`
-    font-size: 26px;
-    padding-top: 50px;
-
-    font-weight: 300;
-    text-align: center;
-  `;
-
-    const WhyAssurilyBody = styled.p`
-      font-size: 17px;
-      margin-top: 50px;
-      padding: 0 35px;
-  
-      line-height: 27px;
-      font-weight: 300;
-      text-align: center;
-    `;
-    const WhyAssurilyBody2 = styled.p`
-      font-size: 17px;
-      margin-top: 20px;
-      margin-bottom: 60px;
-      padding: 0 35px;
-
-      line-height: 27px;
-      font-weight: 300;
-      text-align: center;
-    `;
   return (
     <div>
       <BSNavBar />
@@ -219,21 +129,18 @@ const Home = () => {
           <Transformation crop="fit" quality="auto:low" />
         </Video>
       </div>
-      <MagicContainer>
+      <MagicContainer isMob={isMobile} innerHeight={window.innerHeight}>
         <MagicTitle>TAKE BACK WHAT IS YOURS </MagicTitle>
         <MagicStatement>
           Your home & auto insurance shopper that saves you time and money.
         </MagicStatement>
         <MagicButton href="./Signup">Sign Up for Free</MagicButton>
-        <div className="largepad"></div>
       </MagicContainer>
       <Testimonials />
       <Howitworks />
-      
       <Fade>
         <Companies />
       </Fade>
-
       <Fade>
         <WhyAssurily>Why Assurily?</WhyAssurily>
       </Fade>
@@ -250,12 +157,147 @@ const Home = () => {
         </WhyAssurilyBody2>
       </Fade>
       <Fade style={{ textAlign: "center" }}>
-        <RButton />
+        <RButton link="./Signup" text="Sign Up Now" />
+      </Fade>
+      <FourIcons />
+      <Fade direction={"up"} triggerOnce={true}>
+        <AssurilyTag>
+          <b>ASSURILY RESOURCES</b>
+        </AssurilyTag>
       </Fade>
 
-      <FourIcons />
+      <AssurilyResources />
+
+      <Fade direction={"up"} triggerOnce={true}>
+        <LargeText>
+          <b>See what we can do for you</b>
+        </LargeText>
+      </Fade>
+      <Fade
+        style={{
+          textAlign: "center",
+          paddingTop: "30px",
+          paddingBottom: "70px",
+        }}
+      >
+        <RButton link="./Services" text="See How it Works" />
+      </Fade>
     </div>
   );
 };
+
+const MagicContainer = styled.div`
+  position: absolute;
+  width: 100%;
+  color: white;
+  text-align: center;
+  top: ${(props) => (props.isMob ? 0.3 * props.innerHeight + "px" : "30%")};
+  padding-top: 0%;
+`;
+
+const MagicTitle = styled.p`
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  padding-bottom: 50px;
+  width: 100%;
+  @media (max-width: 600px) {
+    font-size: 16px;
+  }
+`;
+
+const MagicStatement = styled.p`
+  text-align: center;
+  position: relative;
+  font-size: 40px;
+  line-height: 1.5;
+  font-weight: 300;
+  letter-spacing: 0.15rem;
+  text-align: center;
+
+  margin-bottom: 80px;
+  @media (max-width: 600px) {
+    font-size: 25px;
+    font-weight: 100;
+    padding: 0 2%;
+    letter-spacing: 0.12rem;
+  }
+`;
+
+const MagicButton = styled.a`
+  border-radius: 3px;
+  border: none;
+  background-color: #ff3347a6;
+
+  color: white;
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  padding: 15px 80px;
+  text-decoration: none;
+  transition: all 0.25s ease-in-out;
+  &:hover {
+    background-color: #ed0000;
+    transition: all 0.25s ease-in-out;
+    text-decoration: none;
+    color: white;
+  }
+  @media (max-width: 600px) {
+    padding: 8px 60px;
+  }
+`;
+
+const WhyAssurily = styled.h2`
+  font-size: 26px;
+  padding-top: 50px;
+
+  font-weight: 300;
+  text-align: center;
+`;
+
+const WhyAssurilyBody = styled.p`
+  font-size: 17px;
+  margin-top: 50px;
+  padding: 0 35px;
+
+  line-height: 27px;
+  font-weight: 300;
+  text-align: center;
+`;
+const WhyAssurilyBody2 = styled.p`
+  font-size: 17px;
+  margin-top: 20px;
+  margin-bottom: 60px;
+  padding: 0 35px;
+
+  line-height: 27px;
+  font-weight: 300;
+  text-align: center;
+`;
+
+const AssurilyTag = styled.p`
+    font-size: 17px;
+    margin-top: 20px;
+    margin-bottom: 60px;
+    padding-top: 100px;
+    padding-bottom: 30px
+
+    line-height: 27px;
+    font-weight: 300;
+    text-align: center;
+  `;
+const LargeText = styled.h1`
+    font-size: 35px;
+    padding-top: 0px;
+    padding-bottom: 30px
+
+    line-height: 27px;
+    font-weight: 300;
+    text-align: center;
+    @media (max-width: 600px) {
+      font-size: 24px;
+    }
+ `;
 
 export default Home;
