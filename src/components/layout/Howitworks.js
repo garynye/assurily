@@ -3,14 +3,11 @@ import RButton from "../layout/RButton";
 import styled from "styled-components";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import Fade from "react-reveal/Fade";
+import { Fade } from "react-awesome-reveal";
 
 //use intersection observer
 
 const Howitworks = () => {
-
-
-
   return (
     <>
       <DivStyle>
@@ -42,14 +39,7 @@ const Howitworks = () => {
       <DivStyle>
         <Fade>
           <Row style={noOverflow} className="align-items-center">
-            <Col style={noOverflow} lg={7}>
-              <Image
-                className="img-fluid w-100"
-                src="https://res.cloudinary.com/assurily/image/upload/v1604687931/assurily/howitworks/gift.jpg"
-                alt=""
-              ></Image>
-            </Col>
-            <Col lg={5}>
+            <Col lg={{ span: 5, order: 1 }} xs={{ span: 12, order: 2 }}>
               <Textdiv>
                 <Title>Free to you, paid by carriers</Title>
                 <Paragraph>
@@ -60,6 +50,17 @@ const Howitworks = () => {
                 <RButton />
                 <Thought>(Make them pay for you)</Thought>
               </Textdiv>
+            </Col>{" "}
+            <Col
+              style={noOverflow}
+              lg={{ span: 7, order: 2 }}
+              xs={{ span: 12, order: 1 }}
+            >
+              <Image
+                className="img-fluid w-100"
+                src="https://res.cloudinary.com/assurily/image/upload/v1604687931/assurily/howitworks/gift.jpg"
+                alt=""
+              ></Image>
             </Col>
           </Row>
         </Fade>
@@ -94,26 +95,14 @@ const Howitworks = () => {
   );
 };
 
-
 const DivStyle = styled.div`
   margin: 0px;
 
-  animation: fadeIn ease 4s;
-  -webkit-animation: fadeIn ease 4s;
-    @media (max-width: 992px) {
-    margin-top: 20px
-    margin-left: 20px
-    margin-right: 20px
-    }
-    @keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;}
-    }
-    @-webkit-keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;}
-    }
-  `;
+  @media (max-width: 992px) {
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+`;
 
 const noOverflow = {
   overflow: "hidden",

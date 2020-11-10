@@ -6,6 +6,7 @@ import Howitworks from "../layout/Howitworks";
 import styled from "styled-components";
 import "../layout/style.css";
 import Testimonials from "../layout/Testimonials.js";
+import Companies from "../layout/Companies.js";
 
 import { Video, Transformation } from "cloudinary-react";
 
@@ -201,6 +202,7 @@ const Home = () => {
       <Testimonials />
 
       <Howitworks />
+      <Companies />
     </div>
   );
 };

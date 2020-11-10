@@ -9,7 +9,9 @@ export default class Testimonials extends Component {
   render() {
     return (
       <Carousel
+        id="testimonials"
         showArrows={true}
+        controls={false}
         infiniteLoop={true}
         showThumbs={false}
         showStatus={false}
@@ -90,16 +92,16 @@ export default class Testimonials extends Component {
   }
 }
 const CarouselRoot = styled.div`
-  width: 64%;
+  // width: calc(100% - 80px);
   margin: auto;
   margin-top: 3%;
   padding-top: 20px;
   background: #fff;
   color: black;
-  height: 100%;
+
   @media (max-width: 600px) {
     outline: 0;
-    width: 93%;
+
     margin: auto;
   }
 `;
@@ -114,7 +116,7 @@ const CarouselImg = styled.img`
 const MyCarousel = styled.div`
   background: #fafafa;
   margin-top: -6%;
-  width: 54%;
+
   margin-left: auto;
   margin-right: auto;
   padding-top: 6%;
@@ -122,19 +124,19 @@ const MyCarousel = styled.div`
   padding-left: 5%;
   padding-right: 5%;
   border: 1px solid #ddd;
-  height: 300px;
+
   @media (max-width: 1400px) {
     background: #fafafa;
     margin-top: -9%;
-    width: 88%;
+
     margin-left: auto;
     margin-right: auto;
     padding-top: 8%;
-    padding-bottom: 12.5%;
+
     padding-left: 5%;
     padding-right: 5%;
     border: 1px solid #ddd;
-    height: 330px;
+
   }
 `;
 
@@ -142,6 +144,7 @@ const Name = styled.h3`
   color: #222;
   font-weight: 100;
   letter-spacing: 0.2px;
+  margin-top: 10px;
   margin-bottom: 4px;
   font-weight: 600;
   text-transform: uppercase;

@@ -7,6 +7,12 @@
 /********************************************
 	COLOURS
 ********************************************/
+
+#testimonals.carousel .carousel-indicators li {
+  visibility: hidden;
+  pointer-events: none;
+  cursor: default;
+}
 .carousel .control-arrow,
 .carousel.carousel-slider .control-arrow {
   -webkit-transition: all 0.25s ease-in;
@@ -57,7 +63,7 @@
 
 .carousel-root {
   outline: none;
-  width: 64%;
+  width: 84%;
   margin: auto;
   margin-top: 3%;
 }
@@ -86,6 +92,7 @@
   top: 50%;
   margin-top: -13px;
   font-size: 18px;
+
 }
 .carousel .thumbs-wrapper {
   margin: 20px;
@@ -220,7 +227,7 @@
 .carousel .slide iframe {
   display: inline-block;
   width: calc(100% - 80px);
-  margin: 0 40px 40px;
+  /* margin: 0 40px 40px; */
   border: 0;
   
 }
@@ -231,7 +238,7 @@
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   position: absolute;
-  bottom: 40px;
+  /* bottom: 40px; */
   left: 50%;
   margin-left: -45%;
   width: 90%;
@@ -271,7 +278,7 @@
   -ms-transition: opacity 0.25s ease-in;
   -o-transition: opacity 0.25s ease-in;
   transition: opacity 0.25s ease-in;
-  opacity: 0.3;
+  opacity: 0;
   filter: alpha(opacity=30);
   box-shadow: none;
   background: #454545 ;
@@ -285,7 +292,7 @@
 }
 .carousel .control-dots .dot.selected,
 .carousel .control-dots .dot:hover {
-  opacity: 1;
+  opacity: 0;
   filter: alpha(opacity=100);
 }
 .carousel .carousel-status {
