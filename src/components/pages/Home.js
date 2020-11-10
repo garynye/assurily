@@ -7,8 +7,10 @@ import styled from "styled-components";
 import "../layout/style.css";
 import Testimonials from "../layout/Testimonials.js";
 import Companies from "../layout/Companies.js";
-
+import RButton from "../layout/RButton"
+import { Fade } from "react-awesome-reveal";
 import { Video, Transformation } from "cloudinary-react";
+import FourIcons from "../layout/FourIcons";
 
 const Home = () => {
   var [isPortrait, setIsPortrait] = React.useState(
@@ -170,6 +172,33 @@ const Home = () => {
     }
   `;
 
+  const WhyAssurily = styled.h2`
+    font-size: 26px;
+    padding-top: 50px;
+
+    font-weight: 300;
+    text-align: center;
+  `;
+
+    const WhyAssurilyBody = styled.p`
+      font-size: 17px;
+      margin-top: 50px;
+      padding: 0 35px;
+  
+      line-height: 27px;
+      font-weight: 300;
+      text-align: center;
+    `;
+    const WhyAssurilyBody2 = styled.p`
+      font-size: 17px;
+      margin-top: 20px;
+      margin-bottom: 60px;
+      padding: 0 35px;
+
+      line-height: 27px;
+      font-weight: 300;
+      text-align: center;
+    `;
   return (
     <div>
       <BSNavBar />
@@ -190,7 +219,6 @@ const Home = () => {
           <Transformation crop="fit" quality="auto:low" />
         </Video>
       </div>
-
       <MagicContainer>
         <MagicTitle>TAKE BACK WHAT IS YOURS </MagicTitle>
         <MagicStatement>
@@ -200,9 +228,32 @@ const Home = () => {
         <div className="largepad"></div>
       </MagicContainer>
       <Testimonials />
-
       <Howitworks />
-      <Companies />
+      
+      <Fade>
+        <Companies />
+      </Fade>
+
+      <Fade>
+        <WhyAssurily>Why Assurily?</WhyAssurily>
+      </Fade>
+      <Fade>
+        <WhyAssurilyBody>
+          You are likely overpaying for home and auto insurance every year.
+          Insurance is complicated and the cost creeps up each year. Monitoring
+          and switching insurance is a hassle.
+        </WhyAssurilyBody>
+      </Fade>
+      <Fade>
+        <WhyAssurilyBody2>
+          Assurily manages it all for you, for <b>FREE</b>.
+        </WhyAssurilyBody2>
+      </Fade>
+      <Fade style={{ textAlign: "center" }}>
+        <RButton />
+      </Fade>
+
+      <FourIcons />
     </div>
   );
 };

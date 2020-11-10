@@ -14,7 +14,7 @@ const MagicButton = styled.a`
   border-radius: 3px;
   border: none;
   background-color: #ff3347;
-
+  
   color: white;
   font-weight: 400;
   font-size: 20px;

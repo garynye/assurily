@@ -50,8 +50,12 @@ const Companies = () => {
   );
 };
 
+
+
+
+
 const CarouselTitle = styled.p`
-  background-color: #1e1e1e;
+
   color: white;
   padding-top: 20px;
   margin: 0;
@@ -61,6 +65,8 @@ const CarouselTitle = styled.p`
 `;
 
 const CarouselRoot = styled.div`
+  padding-bottom: 20px;
+  background-color: #1e1e1e;
   @media (max-width: 992px) {
     margin-top: 20px;
   }
