@@ -76,29 +76,34 @@ const Home = () => {
   React.useEffect(() => {
     aspectRatio.addEventListener("change", changeLayout);
     orientationObject.addEventListener("change", changePortrait);
-    console.log("added listener for aspect ratio and portrait");
 
     function changeLayout() {
-      console.log("changing layout");
       if (aspectRatio.matches && !isMobile) {
         setIsUltraWideScreen(true);
       } else setIsUltraWideScreen(false);
     }
 
+    // function changePortrait() {
+    //   if (!isPortrait && isMobile) {
+
+    //     setIsPortrait(true);
+    //   } else setIsPortrait(false);
+    // }
+
     function changePortrait() {
-      console.log("changing portrait");
-      if (!isPortrait && isMobile) {
+      if (!isPortrait && orientationObject && isMobile) {
         setIsPortrait(true);
-      } else setIsPortrait(false);
+      } else if (isPortrait && !orientationObject && isMobile) {
+        setIsPortrait(false);
+      }
     }
+
     //cleanup function to remove listner on each call
     return () => {
-      console.log("cleanup");
       aspectRatio.removeEventListener("change", changeLayout);
       orientationObject.removeEventListener("change", changePortrait);
     };
   }, [isMobile, aspectRatio, orientationObject, isPortrait]);
-  console.log("rerender");
 
   const MagicContainer = styled.div`
     position: absolute;
@@ -194,6 +199,7 @@ const Home = () => {
         <div className="largepad"></div>
       </MagicContainer>
       <Testimonials />
+
       <Howitworks />
     </div>
   );

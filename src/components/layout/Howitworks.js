@@ -3,50 +3,103 @@ import RButton from "../layout/RButton";
 import styled from "styled-components";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-// import Fade from "react-bootstrap/Fade";
-// import { CSSTransition } from "react-transition-group";
-//uninstall this if not needed.
-
+import Fade from "react-reveal/Fade";
 
 //use intersection observer
 
 const Howitworks = () => {
+
+
+
   return (
-    <div>
-      {/* <CSSTransition in timeout={3000}> */}
-      <Div992>
-        <Row style={noOverflow} className="align-items-center">
-          <Col style={noOverflow} lg={7}>
-            <Image
-              className="img-fluid w-100"
-              src="https://res.cloudinary.com/assurily/image/upload/v1604687931/assurily/howitworks/watchsmall.jpg"
-              alt=""
-            ></Image>
-          </Col>
-          <Col lg={5}>
-            <Textdiv>
-              <Title>Your personal shopper</Title>
-              <Paragraph>
-                We are your expert insurance shopper. Our technology
-                continuously monitors & compares quotes to find you the same or
-                better coverage at a lower price. We handle all the dirty work
-                with switching so you don’t have to.
-              </Paragraph>
-              <RButton />
-              <Thought>(one time, forever)</Thought>
-            </Textdiv>
-          </Col>
-        </Row>
-      </Div992>
-      {/* </CSSTransition> */}
-    </div>
+    <>
+      <DivStyle>
+        <Fade>
+          <Row style={noOverflow} className="align-items-center">
+            <Col style={noOverflow} lg={7}>
+              <Image
+                className="img-fluid w-100"
+                src="https://res.cloudinary.com/assurily/image/upload/v1604687931/assurily/howitworks/watchsmall.jpg"
+                alt=""
+              ></Image>
+            </Col>
+            <Col lg={5}>
+              <Textdiv>
+                <Title>Your personal shopper</Title>
+                <Paragraph>
+                  We are your expert insurance shopper. Our technology
+                  continuously monitors & compares quotes to find you the same
+                  or better coverage at a lower price. We handle all the dirty
+                  work with switching so you don’t have to.
+                </Paragraph>
+                <RButton />
+                <Thought>(one time, forever)</Thought>
+              </Textdiv>
+            </Col>
+          </Row>
+        </Fade>
+      </DivStyle>
+      <DivStyle>
+        <Fade>
+          <Row style={noOverflow} className="align-items-center">
+            <Col style={noOverflow} lg={7}>
+              <Image
+                className="img-fluid w-100"
+                src="https://res.cloudinary.com/assurily/image/upload/v1604687931/assurily/howitworks/gift.jpg"
+                alt=""
+              ></Image>
+            </Col>
+            <Col lg={5}>
+              <Textdiv>
+                <Title>Free to you, paid by carriers</Title>
+                <Paragraph>
+                  This service is free to you. We make the same amount of money
+                  no matter the insurance carrier you go with. We work with more
+                  than 30 insurance carriers across the US.
+                </Paragraph>
+                <RButton />
+                <Thought>(Make them pay for you)</Thought>
+              </Textdiv>
+            </Col>
+          </Row>
+        </Fade>
+      </DivStyle>
+      <DivStyle>
+        <Fade>
+          <Row style={noOverflow} className="align-items-center">
+            <Col style={noOverflow} lg={7}>
+              <Image
+                className="img-fluid w-100"
+                src="https://res.cloudinary.com/assurily/image/upload/v1604687931/assurily/howitworks/driverseat.jpg"
+                alt=""
+              ></Image>
+            </Col>
+            <Col lg={5}>
+              <Textdiv>
+                <Title>You’re in control</Title>
+                <Paragraph>
+                  Customize home and auto coverage that meets your needs. When
+                  we find a better deal for you, you control how often we switch
+                  and when it happens. We won’t do anything without you
+                  approving it.
+                </Paragraph>
+                <RButton />
+                <Thought>(Turn the tables)</Thought>
+              </Textdiv>
+            </Col>
+          </Row>
+        </Fade>
+      </DivStyle>
+    </>
   );
 };
 
-const Div992 = styled.div`
+
+const DivStyle = styled.div`
   margin: 0px;
-  animation: fadeIn ease 1s;
-  -webkit-animation: fadeIn ease 2s;
+
+  animation: fadeIn ease 4s;
+  -webkit-animation: fadeIn ease 4s;
     @media (max-width: 992px) {
     margin-top: 20px
     margin-left: 20px
