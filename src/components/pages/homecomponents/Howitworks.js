@@ -1,5 +1,5 @@
 import React from "react";
-import RButton from "../layout/RButton";
+import RButton from "../../layout/RButton";
 import styled from "styled-components";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";

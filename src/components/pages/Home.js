@@ -1,17 +1,17 @@
 import React from "react";
 
 import BSNavBar from "../layout/BSNavBar";
-import Howitworks from "../layout/Howitworks";
+import Howitworks from "./homecomponents/Howitworks";
 
 import styled from "styled-components";
 import "../layout/style.css";
-import Testimonials from "../layout/Testimonials.js";
-import Companies from "../layout/Companies.js";
+import Testimonials from "./homecomponents/Testimonials.js";
+import Companies from "./homecomponents/Companies.js";
 import RButton from "../layout/RButton";
 import { Fade } from "react-awesome-reveal";
 import { Video, Transformation } from "cloudinary-react";
-import FourIcons from "../layout/FourIcons";
-import AssurilyResources from "../layout/AssurilyResources";
+import FourIcons from "./homecomponents/FourIcons";
+import AssurilyResources from "./homecomponents/AssurilyResources";
 
 const Home = () => {
   var [isPortrait, setIsPortrait] = React.useState(
@@ -190,6 +190,8 @@ const Home = () => {
         </LargeText>
       </Fade>
       <Fade
+        direction={"up"}
+        triggerOnce={true}
         style={{
           textAlign: "center",
           paddingTop: "30px",
