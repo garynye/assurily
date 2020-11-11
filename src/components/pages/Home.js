@@ -166,13 +166,23 @@ const Home = () => {
         </AssurilyTag>
       </Fade>
 
-      <Fade direction={"up"} triggerOnce={true} style={{paddingBottom: "35px"}}>
+      <Fade
+        direction={"up"}
+        triggerOnce={true}
+        style={{ paddingBottom: "35px" }}
+      >
         <LargeText>
           <b>Answers to common questions</b>
         </LargeText>
       </Fade>
 
       <AssurilyResources />
+
+      <Fade direction={"up"} triggerOnce={true}>
+        <AssurilyTag>
+          <b>ASSURILY SERVICES</b>
+        </AssurilyTag>
+      </Fade>
 
       <Fade direction={"up"} triggerOnce={true}>
         <LargeText>
