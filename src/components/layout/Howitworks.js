@@ -16,7 +16,7 @@ const Howitworks = () => {
             <Col style={noOverflow} lg={7}>
               <Image
                 className="img-fluid w-100"
-                src="https://res.cloudinary.com/assurily/image/upload/v1604687931/assurily/howitworks/watchsmall.jpg"
+                src="https://res.cloudinary.com/assurily/image/upload/v1604687931/assurily/howitworks/watchsmall.webp"
                 alt=""
               ></Image>
             </Col>
@@ -58,7 +58,7 @@ const Howitworks = () => {
             >
               <Image
                 className="img-fluid w-100"
-                src="https://res.cloudinary.com/assurily/image/upload/v1604687931/assurily/howitworks/gift.jpg"
+                src="https://res.cloudinary.com/assurily/image/upload/v1604687931/assurily/howitworks/gift.webp"
                 alt=""
               ></Image>
             </Col>
@@ -71,7 +71,7 @@ const Howitworks = () => {
             <Col style={noOverflow} lg={7}>
               <Image
                 className="img-fluid w-100"
-                src="https://res.cloudinary.com/assurily/image/upload/v1604687931/assurily/howitworks/driverseat.jpg"
+                src="https://res.cloudinary.com/assurily/image/upload/v1604687931/assurily/howitworks/driverseat.webp"
                 alt=""
               ></Image>
             </Col>
