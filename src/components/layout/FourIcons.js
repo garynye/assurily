@@ -17,7 +17,12 @@ import {
 const FourIcons = () => {
   return (
     <Container2>
-      <Row sm={12} lg={4} style={{ paddingTop: "40px" }}>
+      <Row
+        sm={12}
+        lg={4}
+        style={{ paddingTop: "40px" }}
+        className="justify-content-center"
+      >
         <Fade direction={"up"} triggerOnce={true}>
           <Col style={{ paddingTop: "40px" }}>
             <FontAwesomeIcon
@@ -84,11 +89,11 @@ const FourIcons = () => {
 };
 
 const Container2 = styled.div`
-  max-width: 70%;
+  width: 70%;
   margin: auto;
-    text-align:left;
-  @media (max-width: 600px) {
-    max-width: 80%;
+    // text-align:left;
+  @media (max-width: 992px) {
+    width: 80%;
     text-align: center;
   }
 `;
@@ -100,7 +105,7 @@ const Title = styled.h1`
   margin: 0;
   text-align: left;
   font-weight: 500;
-  @media (max-width: 600px) {
+  @media (max-width: 992px) {
       text-align:center;
    
   }
@@ -113,7 +118,7 @@ const Message = styled.h2`
   text-align: left;
   line-height: 1.7rem;
   font-weight: 300;
-  @media (max-width: 600px) {
+  @media (max-width: 992px) {
     text-align: center;
   }
 `;

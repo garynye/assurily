@@ -7,8 +7,8 @@ import { Fade } from "react-awesome-reveal";
 
 const AssurilyResources = () => {
     return (
-      <div>
-        <Row sm={12} md={3}>
+      <DivStyle>
+        <Row md={3} className="justify-content-center">
           <Fade direction={"left"} triggerOnce={true}>
             <Col style={noOverflow}>
               <Image
@@ -37,23 +37,35 @@ const AssurilyResources = () => {
             </Col>
           </Fade>
         </Row>
-      </div>
+      </DivStyle>
     );
 }
+
+const DivStyle = styled.div`
+
+//   width: 90%;
+  margin:auto;
+  @media (min-width: 1080px) {
+    max-width: 1080px;
+}
+`;
 
 const noOverflow = {
   overflow: "hidden",
 //   backgroundColor: "rgb(34, 37, 41)",
-  margin: "0",
-  padding: "0",
+
 };
 
 
 const Image = styled.img`
+  transition: all 0.25s ease-in-out;
+    padding: 10px;
+
+  width: 100%;
   &:hover {
     transform: scale(1.1);
-    opacity: 0.7;
-    transition: all 1s ease-in-out;
+
+    transition: all 0.25s ease-in-out;
   }
 `;
 export default AssurilyResources

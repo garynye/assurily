@@ -166,6 +166,12 @@ const Home = () => {
         </AssurilyTag>
       </Fade>
 
+      <Fade direction={"up"} triggerOnce={true} style={{paddingBottom: "35px"}}>
+        <LargeText>
+          <b>Answers to common questions</b>
+        </LargeText>
+      </Fade>
+
       <AssurilyResources />
 
       <Fade direction={"up"} triggerOnce={true}>
@@ -279,7 +285,7 @@ const WhyAssurilyBody2 = styled.p`
 const AssurilyTag = styled.p`
     font-size: 17px;
     margin-top: 20px;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
     padding-top: 100px;
     padding-bottom: 30px
 
@@ -291,12 +297,15 @@ const LargeText = styled.h1`
     font-size: 35px;
     padding-top: 0px;
     padding-bottom: 30px
-
+letter-spacing: .04rem;
     line-height: 27px;
     font-weight: 300;
     text-align: center;
-    @media (max-width: 600px) {
+    @media (max-width: 900px) {
       font-size: 24px;
+      font-weight: 300;
+      letter-spacing: .04rem;
+      
     }
  `;
 
