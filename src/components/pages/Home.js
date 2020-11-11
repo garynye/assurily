@@ -126,7 +126,12 @@ const Home = () => {
           publicId="assurily/videos/desertdrive"
           playsInline="playsinline"
         >
-          <Transformation crop="fit" quality="auto:low" />
+          <Transformation
+            audioCodec="none"
+            quality="auto:low"
+            width="720"
+            crop="scale"
+          />
         </Video>
       </div>
       <MagicContainer isMob={isMobile} innerHeight={window.innerHeight}>
