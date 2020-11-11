@@ -21,7 +21,7 @@ export default class Testimonials extends Component {
         <CarouselRoot>
 
             <CarouselImg
-              src="https://res.cloudinary.com/assurily/image/upload/v1604583228/assurily/faces/SteveMcCallister_rzpuki.jpg"
+              src="https://res.cloudinary.com/assurily/image/upload/v1604583228/assurily/faces/SteveMcCallister_rzpuki.webp"
               alt=""
             />
             <MyCarousel>
@@ -37,7 +37,7 @@ export default class Testimonials extends Component {
         <CarouselRoot>
       
             <CarouselImg
-              src="https://res.cloudinary.com/assurily/image/upload/v1604583228/assurily/faces/PeterZepeda_lxtjl2.jpg"
+              src="https://res.cloudinary.com/assurily/image/upload/v1604583228/assurily/faces/PeterZepeda_lxtjl2.webp"
               alt=""
             />
             <MyCarousel>
@@ -54,7 +54,7 @@ export default class Testimonials extends Component {
         <CarouselRoot>
         
             <CarouselImg
-              src="https://res.cloudinary.com/assurily/image/upload/v1604583228/assurily/faces/JennBecker_gu9ius.jpg"
+              src="https://res.cloudinary.com/assurily/image/upload/v1604583228/assurily/faces/JennBecker_gu9ius.webp"
               alt=""
             />
             <MyCarousel>

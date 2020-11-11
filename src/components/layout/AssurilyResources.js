@@ -17,7 +17,7 @@ const AssurilyResources = () => {
           <Col>
             <Image
               className="img-fluid w-100"
-              src="https://res.cloudinary.com/assurily/image/upload/v1604687931/assurily/FAQ/different.jpg"
+              src="https://res.cloudinary.com/assurily/image/upload/v1604687931/assurily/FAQ/different.webp"
               alt=""
             ></Image>
             <HoverMove>
@@ -51,7 +51,7 @@ const AssurilyResources = () => {
           <Col>
             <Image
               className="img-fluid w-100"
-              src="https://res.cloudinary.com/assurily/image/upload/v1604687931/assurily/FAQ/lock.jpg"
+              src="https://res.cloudinary.com/assurily/image/upload/v1604687931/assurily/FAQ/lock.webp"
               alt=""
             ></Image>{" "}
             <HoverMove>
@@ -82,7 +82,7 @@ const AssurilyResources = () => {
           <Col>
             <Image
               className="img-fluid w-100"
-              src="https://res.cloudinary.com/assurily/image/upload/v1604687931/assurily/FAQ/differentleaf.jpg"
+              src="https://res.cloudinary.com/assurily/image/upload/v1604687931/assurily/FAQ/differentleaf.webp"
               alt=""
             ></Image>{" "}
             <HoverMove>

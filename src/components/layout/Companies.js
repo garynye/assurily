@@ -17,28 +17,28 @@ const Companies = () => {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="https://res.cloudinary.com/assurily/image/upload/v1604979712/assurily/companies/nationwide.png"
+            src="https://res.cloudinary.com/assurily/image/upload/v1604979712/assurily/companies/nationwide.webp"
             alt=""
           />
         </Carousel.Item>
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="https://res.cloudinary.com/assurily/image/upload/v1604979712/assurily/companies/progressive.png"
+            src="https://res.cloudinary.com/assurily/image/upload/v1604979712/assurily/companies/progressive.webp"
             alt=""
           />
         </Carousel.Item>
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="https://res.cloudinary.com/assurily/image/upload/v1604979712/assurily/companies/libertymutual.png"
+            src="https://res.cloudinary.com/assurily/image/upload/v1604979712/assurily/companies/libertymutual.webp"
             alt=""
           />
         </Carousel.Item>
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="https://res.cloudinary.com/assurily/image/upload/v1604979712/assurily/companies/travelers.png"
+            src="https://res.cloudinary.com/assurily/image/upload/v1604979712/assurily/companies/travelers.webp"
             alt=""
           />
         </Carousel.Item>
