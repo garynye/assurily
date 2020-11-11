@@ -12,7 +12,11 @@ import { faCaretSquareDown } from "@fortawesome/free-solid-svg-icons";
 const AssurilyResources = () => {
   return (
     <DivStyle>
-      <Row md={3} className="justify-content-center">
+      <Row
+        md={3}
+        className="justify-content-center"
+        style={{  maxWidth: "100%", margin: "auto"}}
+      >
         <Fade direction={"left"} triggerOnce={true}>
           <Col>
             <Image
@@ -142,6 +146,7 @@ const HoverMove = styled.div`
 
 const DivStyle = styled.div`
   //   width: 90%;
+
   margin: auto;
   @media (min-width: 1080px) {
     max-width: 1080px;
