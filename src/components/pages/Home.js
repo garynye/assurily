@@ -1,6 +1,7 @@
 import React from "react";
 
 import BSNavBar from "../layout/BSNavBar";
+import Footer from "../layout/Footer";
 import Howitworks from "./homecomponents/Howitworks";
 
 import styled from "styled-components";
@@ -12,6 +13,7 @@ import { Fade } from "react-awesome-reveal";
 import { Video, Transformation } from "cloudinary-react";
 import FourIcons from "./homecomponents/FourIcons";
 import AssurilyResources from "./homecomponents/AssurilyResources";
+import Services from "./homecomponents/Services";
 
 const Home = () => {
   var [isPortrait, setIsPortrait] = React.useState(
@@ -34,10 +36,14 @@ const Home = () => {
 
   const divStyleMobile = {
     position: "relative",
+    padding: "0px",
+    margin: "0px",
+    background: "black",
     overflow: "hidden",
     width: "100%",
     height: isPortrait ? window.innerHeight : 0.7 * window.innerWidth,
   };
+
   const divStyleDesktop = {
     position: "relative",
     overflow: "hidden",
@@ -205,6 +211,13 @@ const Home = () => {
       >
         <RButton link="./Services" text="See How it Works" />
       </Fade>
+
+      <Fade direction={"up"} triggerOnce={true}>
+        <Services />
+      </Fade>
+
+      <Footer />
+
     </div>
   );
 };

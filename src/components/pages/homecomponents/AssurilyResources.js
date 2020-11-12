@@ -15,7 +15,7 @@ const AssurilyResources = () => {
       <Row
         md={3}
         className="justify-content-center"
-        style={{  maxWidth: "100%", margin: "auto"}}
+        style={{ overflow: "hidden", maxWidth: "100%", margin: "auto"}}
       >
         <Fade direction={"left"} triggerOnce={true}>
           <Col>
