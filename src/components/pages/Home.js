@@ -147,7 +147,7 @@ const Home = () => {
         </MagicStatement>
         <MagicButton href="./Signup">Sign Up for Free</MagicButton>
       </MagicContainer>
-      <div style={{ backgroundColor: "#F5F7F9" }}>
+      <div style={{ backgroundColor: "#F5F7F9", overflow: "hidden"}}>
         <Testimonials />
       </div>
 

@@ -269,13 +269,12 @@ const CardBody = styled(Card.Body)`
   margin-right: auto;
 `;
 
-
 const CarouselRoot = styled.div`
-  padding-bottom: 20px;
+  padding-bottom: 80px;
   overflow: hidden;
   max-width: 100%;
   margin: auto;
-
+  overflow: hidden;
   @media (max-width: 992px) {
     margin-top: 20px;
   }
