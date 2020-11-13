@@ -147,7 +147,10 @@ const Home = () => {
         </MagicStatement>
         <MagicButton href="./Signup">Sign Up for Free</MagicButton>
       </MagicContainer>
-      <Testimonials />
+      <div style={{ backgroundColor: "#F5F7F9" }}>
+        <Testimonials />
+      </div>
+
       <Howitworks />
       <Fade>
         <Companies />
@@ -217,7 +220,6 @@ const Home = () => {
       </Fade>
 
       <Footer />
-
     </div>
   );
 };
