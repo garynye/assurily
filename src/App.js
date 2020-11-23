@@ -16,11 +16,14 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route path="/purpose" component={Purpose} />
         <Route path="/signup" component={Signup} />
+
         <Route path={"*"}>
-          <Redirect to="/" />
+           <Redirect to="/" />
         </Route>
       </Switch>
     </Router>
+    // <Signup />
+
   );
 }
 
